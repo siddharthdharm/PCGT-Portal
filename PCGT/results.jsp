@@ -7,8 +7,8 @@
 
     final String JDBC_DRIVER = "com.mysql.jdbc.Driver";         // JDBC Driver Name //
     final String DB_URL = "jdbc:mysql://localhost:3306/pcgt";   // URL of your Database //
-    final String USER = "root";                                 // Database credentials //
-    final String PASS = "";
+    final String USER = "pcgt";                                 // Database credentials //
+    final String PASS = "pcgt@mytrah";
     Connection conn = null;
     Statement stmt = null;
 
@@ -252,11 +252,11 @@
     }
 
     fileInputStream3.close();
-    conn.close();   
+    conn.close();
 
-    /*String site = new String("/Mytrah/PCGT/index.html");
+    String site = new String("/Mytrah/PCGT/index.html");
     response.setStatus(response.SC_MOVED_TEMPORARILY);
-    response.setHeader("Location", site);*/
+    response.setHeader("Location", site);
     
     }catch(SQLException se){
     //Handle errors for JDBC

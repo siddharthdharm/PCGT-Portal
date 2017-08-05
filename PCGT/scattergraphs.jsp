@@ -26,8 +26,8 @@ ${demo.css}
 
     final String JDBC_DRIVER = "com.mysql.jdbc.Driver";         // JDBC Driver Name //
     final String DB_URL = "jdbc:mysql://localhost:3306/pcgt";   // URL of your Database //
-    final String USER = "root";                                 // Database credentials //
-    final String PASS = "";
+    final String USER = "pcgt";                                 // Database credentials //
+    final String PASS = "pcgt@mytrah";
     Connection conn = null;
     Statement stmt = null;
     String result3location = "";
@@ -47,13 +47,18 @@ ${demo.css}
     StringBuilder set9 = new StringBuilder("[ ");
     StringBuilder set10 = new StringBuilder("[ ");
     StringBuilder set11 = new StringBuilder("[ ");
+    StringBuilder set12 = new StringBuilder("[ ");
+    StringBuilder set13 = new StringBuilder("[ ");
+    StringBuilder set14 = new StringBuilder("[ ");
+    StringBuilder set15 = new StringBuilder("[ ");
+    StringBuilder set16 = new StringBuilder("[ ");
 
     try{
 
     Class.forName("com.mysql.jdbc.Driver");
     conn = DriverManager.getConnection(DB_URL,USER,PASS);
 
-    String g2 = "SELECT COUNT(*) FROM binneddata";
+    String g2 = "SELECT COUNT(*) FROM `binneddata` WHERE count > 0;";
     stmt = conn.createStatement();
     ResultSet rs1 = stmt.executeQuery(g2);
     while(rs1.next()){
@@ -62,30 +67,32 @@ ${demo.css}
     }
     stmt.close();
 
-    String g1 = "SELECT * from binneddata";
+    String g1 = "SELECT * FROM `binneddata` WHERE count > 0;";
     stmt = conn.createStatement();
     ResultSet rs = stmt.executeQuery(g1);
     i = 0;
     while(rs.next()){
-
-    double windspeedavg = rs.getDouble("windspeedavg");
-    double power = rs.getDouble("poweravg");
-    double stddev = rs.getDouble("stddev");
-    
-    if(i==rows-1){
-    set.append("["+windspeedavg+", "+power+"] ");
-    set1.append("["+windspeedavg+", "+stddev+"] ");
-    }
-    else if(i<rows-1){
-    set.append("["+windspeedavg+", "+power+"], ");
-    set1.append("["+windspeedavg+", "+stddev+"], "); 
-    }
-    
-    i++;
-
+        double windspeedavg = rs.getDouble("windspeedavg");
+        double power = rs.getDouble("poweravg");
+        double stddev = rs.getDouble("stddev");
+        double pitchavg = rs.getDouble("pitchavg");
+        double cpavg = rs.getDouble("cpavg");
+        
+        if(i==rows-1) {
+            set.append("["+windspeedavg+", "+power+"] ");
+            set13.append("["+windspeedavg+", "+pitchavg+"] ");
+            set14.append("["+windspeedavg+", "+cpavg+"] ");
+        }
+        else if(i<rows-1) {
+            set.append("["+windspeedavg+", "+power+"], ");
+            set13.append("["+windspeedavg+", "+pitchavg+"], ");
+            set14.append("["+windspeedavg+", "+cpavg+"], ");
+        }
+        i++;
     }
     set.append(" ]");
-    set1.append(" ]");
+    set13.append(" ]");
+    set14.append(" ]");
 
     stmt.close();
 
@@ -106,8 +113,8 @@ ${demo.css}
     while(rs3.next()){
 
     double powermin = rs3.getDouble("power_min");
-    double windspeed = rs3.getDouble("windspeed");
     double powermax = rs3.getDouble("power_max");
+    double windspeed = rs3.getDouble("windspeed");
     double pitch = rs3.getDouble("pitchangle");
     double cp = rs3.getDouble("cp");
     double gridfrequency = rs3.getDouble("frequency");
@@ -116,8 +123,13 @@ ${demo.css}
     double turbulenceintensity = rs3.getDouble("ti");
     double temp = rs3.getDouble("temperature");
     double pressure = rs3.getDouble("pressure");
+    double rawpower = rs3.getDouble("power");
+    double powersd = rs3.getDouble("power_sd");
+    double rotorrpmmin = rs3.getDouble("rotorrpm_min");
+    double rotorrpmmax = rs3.getDouble("rotorrpm_max");
 
     if(i==rows-1){
+    set1.append("["+windspeed+", "+powersd+"] ");
     set2.append("["+windspeed+", "+powermin+"] ");
     set3.append("["+windspeed+", "+powermax+"] ");
     set4.append("["+windspeed+", "+pitch+"] ");
@@ -128,9 +140,13 @@ ${demo.css}
     set9.append("["+windspeed+", "+turbulenceintensity+"] ");
     set10.append("["+windspeed+", "+temp+"] ");
     set11.append("["+windspeed+", "+pressure+"] ");
+    set12.append("["+windspeed+", "+rawpower+"] ");
+    set15.append("["+windspeed+", "+rotorrpmmin+"] ");
+    set16.append("["+windspeed+", "+rotorrpmmax+"] ");
 
     }
     else if(i<rows-1){
+    set1.append("["+windspeed+", "+powersd+"], ");
     set2.append("["+windspeed+", "+powermin+"], ");
     set3.append("["+windspeed+", "+powermax+"], ");
     set4.append("["+windspeed+", "+pitch+"], ");
@@ -141,12 +157,16 @@ ${demo.css}
     set9.append("["+windspeed+", "+turbulenceintensity+"], ");
     set10.append("["+windspeed+", "+temp+"], ");
     set11.append("["+windspeed+", "+pressure+"], ");
+    set12.append("["+windspeed+", "+rawpower+"], ");
+    set15.append("["+windspeed+", "+rotorrpmmin+"], ");
+    set16.append("["+windspeed+", "+rotorrpmmax+"], ");
 
     }
     
     i++;
 
     }
+    set1.append(" ]");
     set2.append(" ]");
     set3.append(" ]");
     set4.append(" ]");
@@ -157,6 +177,9 @@ ${demo.css}
     set9.append(" ]");
     set10.append(" ]");
     set11.append(" ]");
+    set12.append(" ]");
+    set15.append(" ]");
+    set16.append(" ]");
 
     conn.close();
     
@@ -190,6 +213,18 @@ ${demo.css}
 		<script type="text/javascript">
 
 Highcharts.chart('container', {
+
+    chart: {
+        type: 'spline',
+        name: 'Average',
+        data: <% out.println(set); %>,
+        marker: {
+            lineWidth: 2,
+            lineColor: Highcharts.getOptions().colors[3],
+            fillColor: 'white'
+        }
+    },
+
     chart: {
         type: 'scatter',
         zoomType: 'xy'
@@ -246,21 +281,26 @@ Highcharts.chart('container', {
         }
     },
     series: [{
-        name: 'Power Mean',
-        color: 'rgba(0, 0, 0, .5)',
-        data: <% out.println(set); %>
-    }, {
         name: 'Power Min',
-        color: 'rgba(223, 83, 83, .5)',
+        color: 'rgba(265, 165, 0, .5)',
         data: <% out.println(set2); %>
     }, {
         name: 'Power Max',
-        color: 'rgba(78, 222, 83, .5)',
+        color: 'rgba(10, 222, 222, .5)',
         data: <% out.println(set3); %>
     }, {
+        name: 'Power Mean',
+        color: 'rgba(128, 128, 128, .5)',
+        data: <% out.println(set12); %>
+    }, {
         name: 'Power STD DEV',
-        color: 'rgba(10, 222, 222, .5)',
+        color: 'rgba(255, 255, 0, .5)',
         data: <% out.println(set1); %>
+    }, {
+        type: 'line',
+        name: 'Binned Mean',
+        color: 'rgba(255, 0, 0, 1)',
+        data: <% out.println(set); %>
     }]
 });
 
@@ -332,8 +372,13 @@ Highcharts.chart('container1', {
     },
     series: [{
         name: 'Pitch',
-        color: 'rgba(78, 222, 83, .5)',
+        color: 'rgba(163, 255, 43, 0.5)',
         data: <% out.println(set4); %>
+    }, {
+        type: 'line',
+        name: 'Binned Pitch Mean',
+        color: 'rgba(255, 0, 0, 1)',
+        data: <% out.println(set13); %>
     }]
 });
 
@@ -405,8 +450,13 @@ Highcharts.chart('container2', {
     },
     series: [{
         name: 'Cp',
-        color: 'rgba(119, 122, 222, .5)',
+        color: 'rgba(163, 255, 43, 0.5)',
         data: <% out.println(set5); %>
+    }, {
+        type: 'line',
+        name: 'Binned Cp Mean',
+        color: 'rgba(255, 0, 0, 1)',
+        data: <% out.println(set14); %>
     }]
 });
 
@@ -478,7 +528,7 @@ Highcharts.chart('container3', {
     },
     series: [{
         name: 'Grid Frequency',
-        color: 'rgba(255, 122, 222, .5)',
+        color: 'rgba(35, 102, 237, .5)',
         data: <% out.println(set6); %>
     }]
 });
@@ -550,9 +600,13 @@ Highcharts.chart('container4', {
         }
     },
     series: [{
-        name: 'Cp',
-        color: 'rgba(255, 122, 222, .5)',
+        name: 'Rotor RPM',
+        color: 'rgba(35, 102, 237, .5)',
         data: <% out.println(set7); %>
+    }, {
+        name: 'Rotor RPM S.D',
+        color: 'rgba(4, 145, 16, .5)',
+        data: <% out.println(set8); %>
     }]
 });
 
@@ -572,7 +626,7 @@ Highcharts.chart('container5', {
         zoomType: 'xy'
     },
     title: {
-        text: 'RPM vs. Windspeed'
+        text: 'Rotor RPM (Max and Min) vs. Windspeed'
     },
     xAxis: {
         title: {
@@ -623,9 +677,13 @@ Highcharts.chart('container5', {
         }
     },
     series: [{
-        name: 'RPM',
-        color: 'rgba(60, 122, 222, .5)',
-        data: <% out.println(set8); %>
+        name: 'Rotor RPM Min',
+        color: 'rgba(255, 0, 0, 1)',
+        data: <% out.println(set15); %>
+    }, {
+        name: 'Rotor RPM Max',
+        color: 'rgba(35, 102, 237, .5)',
+        data: <% out.println(set16); %>
     }]
 });
 
@@ -697,7 +755,7 @@ Highcharts.chart('container6', {
     },
     series: [{
         name: 'Turbulence Intensity',
-        color: 'rgba(60, 122, 222, .5)',
+        color: 'rgba(35, 102, 237, .5)',
         data: <% out.println(set9); %>
     }]
 });
@@ -770,7 +828,7 @@ Highcharts.chart('container7', {
     },
     series: [{
         name: 'Temperature',
-        color: 'rgba(60, 122, 222, .5)',
+        color: 'rgba(35, 102, 237, .5)',
         data: <% out.println(set10); %>
     }]
 });
@@ -843,7 +901,7 @@ Highcharts.chart('container8', {
     },
     series: [{
         name: 'Atmospheric Pressure',
-        color: 'rgba(60, 122, 222, .5)',
+        color: 'rgba(35, 102, 237, .5)',
         data: <% out.println(set11); %>
     }]
 });

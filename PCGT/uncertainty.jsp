@@ -7,8 +7,8 @@
 
     final String JDBC_DRIVER = "com.mysql.jdbc.Driver";         // JDBC Driver Name //
     final String DB_URL = "jdbc:mysql://localhost:3306/pcgt";   // URL of your Database //
-    final String USER = "root";                                 // Database credentials //
-    final String PASS = "";
+    final String USER = "pcgt";                                 // Database credentials //
+    final String PASS = "pcgt@mytrah";
     Connection conn = null;
     Statement stmt = null;
 
