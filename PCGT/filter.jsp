@@ -37,33 +37,33 @@
 
     if(fault != null){
 
-    String z = "ALTER TABLE rawdata2 ADD mySerial int(11) DEFAULT '0' NOT NULL;";
-    String z1 = "SELECT @n:=0;";
-    String z2 = "UPDATE rawdata2 SET mySerial = @n := @n + 1;";
-    stmt = conn.createStatement();
-    stmt.executeUpdate(z);
-    stmt.executeQuery(z1);
-    stmt.execute(z2);
-    stmt.close();
+        String z = "ALTER TABLE rawdata2 ADD mySerial int(11) DEFAULT '0' NOT NULL;";
+        String z1 = "SELECT @n:=0;";
+        String z2 = "UPDATE rawdata2 SET mySerial = @n := @n + 1;";
+        stmt = conn.createStatement();
+        stmt.executeUpdate(z);
+        stmt.executeQuery(z1);
+        stmt.execute(z2);
+        stmt.close();
 
-    String z3 = "SELECT t1.mySerial FROM rawdata2 t1 INNER JOIN rawdata2 t2 ON t1.mySerial= t2.mySerial+1 where t2.fault!=0 and t1.turbineavailibility=100";
-    stmt = conn.createStatement(); 
-    ResultSet rs = stmt.executeQuery(z3);
-    while (rs.next()) {
+        String z3 = "SELECT t1.mySerial FROM rawdata2 t1 INNER JOIN rawdata2 t2 ON t1.mySerial= t2.mySerial+1 where t2.fault!=0 and t1.turbineavailibility=100";
+        stmt = conn.createStatement(); 
+        ResultSet rs = stmt.executeQuery(z3);
+        while (rs.next()) {
 
-    int srno = rs.getInt("mySerial");
-    
-    String main = "DELETE FROM rawdata2 WHERE mySerial = "+srno;
-    stmt = conn.createStatement();
-    stmt.execute(main);
-    stmt.close();
-    }
-    stmt.close();
+        int srno = rs.getInt("mySerial");
+        
+        String main = "DELETE FROM rawdata2 WHERE mySerial = "+srno;
+        stmt = conn.createStatement();
+        stmt.execute(main);
+        stmt.close();
+        }
+        stmt.close();
 
-    String norm = "ALTER TABLE rawdata2 DROP mySerial;";
-    stmt = conn.createStatement();
-    stmt.execute(norm);
-    stmt.close();
+        String norm = "ALTER TABLE rawdata2 DROP mySerial;";
+        stmt = conn.createStatement();
+        stmt.execute(norm);
+        stmt.close();
 
     }
 
@@ -394,7 +394,7 @@
     stmt.executeQuery(export);
     stmt.close();
     
-    //DONWLOADING THE FILE 
+    //DONWLOADING THE FILE
 
     String filename = "filtered.csv";             // FILE NAME //
     String filepath = filteredlocation;           // FILE PATH //  
