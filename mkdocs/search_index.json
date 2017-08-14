@@ -1,0 +1,144 @@
+{
+    "docs": [
+        {
+            "location": "/",
+            "text": "Welcome to the PCGT Portal Documentation!\n\n\n\n\n\nThis entire application is completely \nOpen-Source\n and is made available for download on \nGitHub\n.\n\n\nProject Layout\n\n\nImages_For_Documentation/       # Used on the PCGT-Portal Documentation Page.\n\nassets/                         # The Front-End.\n    bootstrap/                  # Bootstrap\n    css/                        # CSS\n    font-awesome/               # Fonts      \n    ico/                        # ICONS\n    im/                         # IMAGES\n    js/                         # JavaScript\n\nPCGT/                           # The entire back-end code.\n\nServerDetails/                  # Server Configuration File Generator Code\n    assets/                     # Front-End\n    config.html                 # HTML Page\n    getserverdetails.jsp        # JSP Code\n\nSETUP/                          # LIBRARIES AND SQL USED \n    WEB-INF/                    # JAR FILES\n    pcgt.sql                    # SQL DATABASE IMPORT FILE\n\nMytrah-PCGT-installation.exe    # Installation File\n\nPCGT Portal Software Manual     # Manual\n\nREADME.md                       # README file",
+            "title": "Home"
+        },
+        {
+            "location": "/#welcome-to-the-pcgt-portal-documentation",
+            "text": "This entire application is completely  Open-Source  and is made available for download on  GitHub .",
+            "title": "Welcome to the PCGT Portal Documentation!"
+        },
+        {
+            "location": "/#project-layout",
+            "text": "Images_For_Documentation/       # Used on the PCGT-Portal Documentation Page.\n\nassets/                         # The Front-End.\n    bootstrap/                  # Bootstrap\n    css/                        # CSS\n    font-awesome/               # Fonts      \n    ico/                        # ICONS\n    im/                         # IMAGES\n    js/                         # JavaScript\n\nPCGT/                           # The entire back-end code.\n\nServerDetails/                  # Server Configuration File Generator Code\n    assets/                     # Front-End\n    config.html                 # HTML Page\n    getserverdetails.jsp        # JSP Code\n\nSETUP/                          # LIBRARIES AND SQL USED \n    WEB-INF/                    # JAR FILES\n    pcgt.sql                    # SQL DATABASE IMPORT FILE\n\nMytrah-PCGT-installation.exe    # Installation File\n\nPCGT Portal Software Manual     # Manual\n\nREADME.md                       # README file",
+            "title": "Project Layout"
+        },
+        {
+            "location": "/about/",
+            "text": "Mytrah Energy (India) Pvt. Ltd.\n\n\nHeadquartered in London, UK, the Mytrah Group is focused on \ndelivering sustainable energy\n in a world without subsidies. Mytrah Energy (India) Pvt. Ltd. aims to own and operate \n3500 MW of Renewable Power\n in India. Currently, it has a total wind portfolio energy capacity of \n1000 MW.\n These assets are spread across \nfifteen wind farms in eight states\n - \nRajasthan, Gujarat, Madhya Pradesh, Maharashtra, Andhra Pradesh, Telangana, Karnataka and Tamil Nadu.\n The company's portfolio was built using a combination of 'turn-key' developers and in-house project development, with wind turbines purchased from leading international vendors.\n\n\nFor further info, one can visit their website - \nMytrah Energy (India) Pvt. Ltd\n.\n\n\nCollaboration with Birla Institute of Technology and Science (BITS), Pilani\n\n\nMytrah Energy (India) Pvt. Ltd. has \nsigned an MoU\n with BITS Pilani Hyderabad Campus in order to hire college students (as interns) and give them projects which will be useful to the company, such as creating \nAutomation Tools and Softwares\n. This, in turn, helps the students getting exposed to the \n\"corporate world\"\n. Difficulties faced in real-life problems are brought to light. Apart from that, students learn to \napply\n their educational knowledge and come up with different approaches to solve a given problem.\n\n\nBirla Institute of Technology and Science (BITS), Pilani - Hyderabad\n\n\nEstablished in 2008, BITS Pilani Hyderabad Campus is the fourth BITS campus after Pilani, Dubai and Goa. It serves as a home to around 4000 undergraduates, 500 M.Tech students, and 100 Ph.D scholars. Around 5 lakh students write the \nBITSAT\n (Entrance Exam for Engineering) every year, and only 2200 students are selected (across all the campuses). Being the best private institution in the country, BITS Pilani admits students based only on \npure merit\n. \n\nOne can get more information on the \nBITS Pilani\n website.",
+            "title": "About"
+        },
+        {
+            "location": "/about/#mytrah-energy-india-pvt-ltd",
+            "text": "Headquartered in London, UK, the Mytrah Group is focused on  delivering sustainable energy  in a world without subsidies. Mytrah Energy (India) Pvt. Ltd. aims to own and operate  3500 MW of Renewable Power  in India. Currently, it has a total wind portfolio energy capacity of  1000 MW.  These assets are spread across  fifteen wind farms in eight states  -  Rajasthan, Gujarat, Madhya Pradesh, Maharashtra, Andhra Pradesh, Telangana, Karnataka and Tamil Nadu.  The company's portfolio was built using a combination of 'turn-key' developers and in-house project development, with wind turbines purchased from leading international vendors.  For further info, one can visit their website -  Mytrah Energy (India) Pvt. Ltd .",
+            "title": "Mytrah Energy (India) Pvt. Ltd."
+        },
+        {
+            "location": "/about/#collaboration-with-birla-institute-of-technology-and-science-bits-pilani",
+            "text": "Mytrah Energy (India) Pvt. Ltd. has  signed an MoU  with BITS Pilani Hyderabad Campus in order to hire college students (as interns) and give them projects which will be useful to the company, such as creating  Automation Tools and Softwares . This, in turn, helps the students getting exposed to the  \"corporate world\" . Difficulties faced in real-life problems are brought to light. Apart from that, students learn to  apply  their educational knowledge and come up with different approaches to solve a given problem.",
+            "title": "Collaboration with Birla Institute of Technology and Science (BITS), Pilani"
+        },
+        {
+            "location": "/about/#birla-institute-of-technology-and-science-bits-pilani-hyderabad",
+            "text": "Established in 2008, BITS Pilani Hyderabad Campus is the fourth BITS campus after Pilani, Dubai and Goa. It serves as a home to around 4000 undergraduates, 500 M.Tech students, and 100 Ph.D scholars. Around 5 lakh students write the  BITSAT  (Entrance Exam for Engineering) every year, and only 2200 students are selected (across all the campuses). Being the best private institution in the country, BITS Pilani admits students based only on  pure merit .  One can get more information on the  BITS Pilani  website.",
+            "title": "Birla Institute of Technology and Science (BITS), Pilani - Hyderabad"
+        },
+        {
+            "location": "/why/",
+            "text": "Why was this project undertaken?\n\n\nPerforming complex calculations on the data collected from a windmill has never been an easy task. Calculating power/energy values, and generating power/efficiency curves demands tremendous amounts of calculations in MS Excel, as well as a huge amount of time. And with time, comes patience. In this fast-paced world, \ntime\n wasted is nothing short of \nmoney\n being wasted. Hence, we, students of BITS Pilani Hyderabad Campus, took up this project and came up with a solution for \nautomating the entire process of performing all the necessary calculations as efficiently as possible and creating results/graphs within just a few seconds.\n \n\n\nOnce the application is installed, the user is only required to upload the necessary \nraw data files.\n After that, the results of all the calculations are \njust a few clicks away\n!\n\n\nThe merit and accomplishment of this project can be measured only in terms of the amount of \ntime saved\n by the user!",
+            "title": "Need of the Hour"
+        },
+        {
+            "location": "/why/#why-was-this-project-undertaken",
+            "text": "Performing complex calculations on the data collected from a windmill has never been an easy task. Calculating power/energy values, and generating power/efficiency curves demands tremendous amounts of calculations in MS Excel, as well as a huge amount of time. And with time, comes patience. In this fast-paced world,  time  wasted is nothing short of  money  being wasted. Hence, we, students of BITS Pilani Hyderabad Campus, took up this project and came up with a solution for  automating the entire process of performing all the necessary calculations as efficiently as possible and creating results/graphs within just a few seconds.    Once the application is installed, the user is only required to upload the necessary  raw data files.  After that, the results of all the calculations are  just a few clicks away !  The merit and accomplishment of this project can be measured only in terms of the amount of  time saved  by the user!",
+            "title": "Why was this project undertaken?"
+        },
+        {
+            "location": "/tech/",
+            "text": "Front End\n\n\nThe face of the application is created in \nHTML5\n & \nCSS\n, and is integrated with Bootstrap! (making it responsive to device/screen size). [Visit the \nBootstrap\n page for more info.]\n\n\nBack End\n\n\n\n\nLanguages - \nJava (JSP)\n & \nSQL\n.\n\n\nDatabase - \nMySQL (Open Source, Relational Database)\n. [\nDownload\n]\n\n\n\n\nCompatibilities\n\n\n\n\nThis application will require a server which is using \nApache Tomcat 7.0\n (or above).   [Visit the \nApache Tomcat\n page for more info.]\n\n\nServer Machine Operating System - \nWindows ONLY\n.\n\n\nAny version of MySQL can be used along with this application. Using the latest one is highly recommended. Whichever version of MySQL one chooses to install, the user \nmust ensure\n that MySQL is using its \nStandard Port (i.e. 3306)\n on the server.",
+            "title": "Technologies Used"
+        },
+        {
+            "location": "/tech/#front-end",
+            "text": "The face of the application is created in  HTML5  &  CSS , and is integrated with Bootstrap! (making it responsive to device/screen size). [Visit the  Bootstrap  page for more info.]",
+            "title": "Front End"
+        },
+        {
+            "location": "/tech/#back-end",
+            "text": "Languages -  Java (JSP)  &  SQL .  Database -  MySQL (Open Source, Relational Database) . [ Download ]",
+            "title": "Back End"
+        },
+        {
+            "location": "/tech/#compatibilities",
+            "text": "This application will require a server which is using  Apache Tomcat 7.0  (or above).   [Visit the  Apache Tomcat  page for more info.]  Server Machine Operating System -  Windows ONLY .  Any version of MySQL can be used along with this application. Using the latest one is highly recommended. Whichever version of MySQL one chooses to install, the user  must ensure  that MySQL is using its  Standard Port (i.e. 3306)  on the server.",
+            "title": "Compatibilities"
+        },
+        {
+            "location": "/install/",
+            "text": "Installation Steps\n\n\nSTEP 1 :\n Click on the \nMytrah-PCGT-installation.exe\n file which is in the main directory of the application.\n\n\nSTEP 2 :\n It will ask you to enter your server's ROOT directory. After filling it up, click on \nInstall\n.  This will deploy the application on your server and also import the PCGT database in MySQL.\n\n\nSTEP 3 :\n Start using the application by setting up your '\ntemp\n ' folder location on the server. Create a new folder which is \nNOT\n in the same directory as the Operating System (to avoid permission issues). This temporary folder is used to store files created during the runtime of this application. After it has been created, open up your internet browser and navigate to the following URL - \nhttps://localhost/Mytrah/ServerDetails/config.html\n . \nOn this page, enter the \nabsolute address (path)\n of your temp folder.\n\n\nSTEP 4 :\n After the '\ntemp\n ' folder has been set up, you're good to go! Just restart the server and enter the following URL for the landing page - \nhttps://localhost/Mytrah/PCGT/index.html\n .",
+            "title": "Installation"
+        },
+        {
+            "location": "/install/#installation-steps",
+            "text": "STEP 1 :  Click on the  Mytrah-PCGT-installation.exe  file which is in the main directory of the application.  STEP 2 :  It will ask you to enter your server's ROOT directory. After filling it up, click on  Install .  This will deploy the application on your server and also import the PCGT database in MySQL.  STEP 3 :  Start using the application by setting up your ' temp  ' folder location on the server. Create a new folder which is  NOT  in the same directory as the Operating System (to avoid permission issues). This temporary folder is used to store files created during the runtime of this application. After it has been created, open up your internet browser and navigate to the following URL -  https://localhost/Mytrah/ServerDetails/config.html  .  On this page, enter the  absolute address (path)  of your temp folder.  STEP 4 :  After the ' temp  ' folder has been set up, you're good to go! Just restart the server and enter the following URL for the landing page -  https://localhost/Mytrah/PCGT/index.html  .",
+            "title": "Installation Steps"
+        },
+        {
+            "location": "/portal/",
+            "text": "The Landing Page\n\n\nThe user can upload the \nraw data\n file here.\n\n\n\n\nThe Site Details Page\n\n\nA form to fill in the \nwindmill specifications\n.\n\n\n\n\nThe Filter\n\n\nBy applying suitable filters, the user can \nclean up\n the data, by removing the garbage and unnecessary values. This step is important for getting \nrefined results\n.\n\n\n\n\nStatic Details\n\n\nHere, the user can upload the \nStatic Power\n and the \nFrequency Distribution\n values. \n\n\n\n\nBinning\n\n\nBinning gives a clear indication as to what the values of certain parameters are, in a \nspecific windspeed range\n. The length of this interval (range) can be set to \n1 or 0.5\n (as per the requirement of the user).\n\n\n\n\nUncertainty\n\n\nThis a form for the user to enter all the uncertainty values relating to the windmill.\n\n\n\n\nWhere Magic Happens!\n\n\nAs you can guess, this is where all the results are generated.\n\n\n\n\nViewing the Database (Real-Time)\n\n\nThis is a solution to solve the problem of entering any garbage data, either while typing or while uploading any file. It is a \nGUI\n (Graphical User Interface) created by us, which shows all the current (real-time) values stored in the database. \nProves to be of immense help while debugging!\n\n\n\n\n\n\n\n\nViewing Graphs\n\n\nAs the name suggests, this page will generate all the graphs based on the values/results stored in the database. Make sure you have completed the \nentire step-by-step procedure\n before this, prior to clicking this button.\n\n\n\n\nSide Menu\n\n\nThis menu comprises of various navigation tools, such as the \nData Entry Page, Credits Page\n and the \nView Database Page\n. The \nPCGT Database\n dropdown serves as a menu to download tables from the database as \nCSV files\n. Note the \nClear Memory\n button. It will erase the entire database. It is to be used only after downloading & verifying results/graphs for a particular windmill OR starting with a new windmill site. \n\n\n\n\nBack to the top",
+            "title": "A Peek into PCGT"
+        },
+        {
+            "location": "/portal/#the-landing-page",
+            "text": "The user can upload the  raw data  file here.",
+            "title": "The Landing Page"
+        },
+        {
+            "location": "/portal/#the-site-details-page",
+            "text": "A form to fill in the  windmill specifications .",
+            "title": "The Site Details Page"
+        },
+        {
+            "location": "/portal/#the-filter",
+            "text": "By applying suitable filters, the user can  clean up  the data, by removing the garbage and unnecessary values. This step is important for getting  refined results .",
+            "title": "The Filter"
+        },
+        {
+            "location": "/portal/#static-details",
+            "text": "Here, the user can upload the  Static Power  and the  Frequency Distribution  values.",
+            "title": "Static Details"
+        },
+        {
+            "location": "/portal/#binning",
+            "text": "Binning gives a clear indication as to what the values of certain parameters are, in a  specific windspeed range . The length of this interval (range) can be set to  1 or 0.5  (as per the requirement of the user).",
+            "title": "Binning"
+        },
+        {
+            "location": "/portal/#uncertainty",
+            "text": "This a form for the user to enter all the uncertainty values relating to the windmill.",
+            "title": "Uncertainty"
+        },
+        {
+            "location": "/portal/#where-magic-happens",
+            "text": "As you can guess, this is where all the results are generated.",
+            "title": "Where Magic Happens!"
+        },
+        {
+            "location": "/portal/#viewing-the-database-real-time",
+            "text": "This is a solution to solve the problem of entering any garbage data, either while typing or while uploading any file. It is a  GUI  (Graphical User Interface) created by us, which shows all the current (real-time) values stored in the database.  Proves to be of immense help while debugging!",
+            "title": "Viewing the Database (Real-Time)"
+        },
+        {
+            "location": "/portal/#viewing-graphs",
+            "text": "As the name suggests, this page will generate all the graphs based on the values/results stored in the database. Make sure you have completed the  entire step-by-step procedure  before this, prior to clicking this button.",
+            "title": "Viewing Graphs"
+        },
+        {
+            "location": "/portal/#side-menu",
+            "text": "This menu comprises of various navigation tools, such as the  Data Entry Page, Credits Page  and the  View Database Page . The  PCGT Database  dropdown serves as a menu to download tables from the database as  CSV files . Note the  Clear Memory  button. It will erase the entire database. It is to be used only after downloading & verifying results/graphs for a particular windmill OR starting with a new windmill site.    Back to the top",
+            "title": "Side Menu"
+        },
+        {
+            "location": "/credits/",
+            "text": "Behind the curtain!\n\n\nThis automation tool is the result of the efforts taken by two developers - \nSiddharth Dharm\n (Back-End) and \nKuldeep Singh Sidhu\n (Front-End).\n\n\nSiddharth Dharm\n is currently pursuing his \n3rd year\n of \nElectronics and Communications Engineering\n at BITS Pilani, Hyderabad Campus. (as of July '17)\n\nYou can check out his LinkedIn and GitHub profiles here - \nLinkedIn\n and \nGitHub\n.\n\n\nKuldeep Singh Sidhu\n is currently pursuing his \n4th year\n of \nManufacturing Engineering\n at BITS Pilani, Hyderabad Campus. (as of July '17)\n\nHave a look at some of the cool stuff he has done in his coding career, on \nGitHub\n and \nLinkedIn\n.",
+            "title": "Credits"
+        },
+        {
+            "location": "/credits/#behind-the-curtain",
+            "text": "This automation tool is the result of the efforts taken by two developers -  Siddharth Dharm  (Back-End) and  Kuldeep Singh Sidhu  (Front-End).  Siddharth Dharm  is currently pursuing his  3rd year  of  Electronics and Communications Engineering  at BITS Pilani, Hyderabad Campus. (as of July '17) \nYou can check out his LinkedIn and GitHub profiles here -  LinkedIn  and  GitHub .  Kuldeep Singh Sidhu  is currently pursuing his  4th year  of  Manufacturing Engineering  at BITS Pilani, Hyderabad Campus. (as of July '17) \nHave a look at some of the cool stuff he has done in his coding career, on  GitHub  and  LinkedIn .",
+            "title": "Behind the curtain!"
+        }
+    ]
+}
